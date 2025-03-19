@@ -13,29 +13,32 @@ bash <(wget -qO- https://raw.githubusercontent.com/lastikonetwork/AutoCHR-On-Doc
 
 - Full Example with Port Mapping
 ```
-docker run --name ros6 --restart unless-stopped \
+sudo docker run --name mikrotik-chr-6 --restart unless-stopped \
     -p 7000:8291 \
-    -p 7001:8728 \
-    -p 7002:8729 \
+    -p 7001:80 \
+    -p 7002:443 \
     -p 7003:22 \
-    -p 7004:80 \
-    -p 7005:443 \
-    -p 7006:21 \
-    -p 7007:23 \
-    -p 7008:53 \
-    -p 7009:2210 \
-    -p 7010:179 \
-    -p 7011:1194 \
-    -p 7012:1723 \
-    -p 7013:53/udp \
-    -p 7014:123/udp \
-    -p 7015:1194/udp \
+    -p 7004:23 \
+    -p 7005:21 \
+    -p 7006:53/udp \
+    -p 7007:53/tcp \
+    -p 7008:123/udp \
+    -p 7009:8728 \
+    -p 7010:8729 \
+    -p 7011:2210 \
+    -p 7012:179 \
+    -p 7013:8292 \
+    -p 7014:1194/udp \
+    -p 7015:1194/tcp \
     -p 7016:1701/udp \
-    -p 7017:500/udp \
-    -p 7018:4500/udp \
-    -p 7019:1812/udp \
-    -p 7020:1813/udp \
-    ros6
+    -p 7017:1723 \
+    -p 7018:500/udp \
+    -p 7019:4500/udp \
+    -p 7020:50/tcp \
+    -p 7021:51/tcp \
+    -p 7022:1812/udp \
+    -p 7023:1813/udp \
+    mikrotik-chr-6
 ```
 
 # Expose Port
