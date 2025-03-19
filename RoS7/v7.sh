@@ -8,7 +8,7 @@ sudo apt install -y wget unzip qemu-utils qemu-user-static
 wget https://www.mikrotik-software.de/downloads/chr-7.2.3.img.zip
 
 # Ekstrak Image
-unzip chr-7.15.3.img.zip
+unzip chr-7.2.3.img.zip
 
 # Konversi Image ke Format QCOW2
 qemu-img convert -f raw -O qcow2 chr-7.2.3.img chr-7.2.3.qcow2
@@ -30,7 +30,7 @@ CMD ["qemu-system-x86_64", "-m", "256M", "-smp", "1", "-hda", "/chr-7.15.3.qcow2
 EOF
 
 # Build Docker Image
-sudo docker build -t mikrotik-chr-6 .
+sudo docker build -t mikrotik-chr-7 .
 
 # Jalankan Container MikroTik CHR
 sudo docker run --name mikrotik-chr-7 --restart unless-stopped \
