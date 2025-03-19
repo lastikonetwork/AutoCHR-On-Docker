@@ -21,8 +21,7 @@ FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y qemu-user-static qemu-system-x86
 
 # Copy the CHR image
-COPY chr-7.15.3.qcow2 /chr-7.15.3.qcow2
-
+COPY chr-7.2.3.qcow2 /chr-7.2.3.qcow2
 # Expose ports
 EXPOSE 8291 80 443 22 23 21 53/udp 53/tcp 123/udp 8728 8729 2210 179 8292 1194/udp 1194/tcp 1701/udp 1723 500/udp 4500/udp 50/tcp 51/tcp 1812/udp 1813/udp
 
@@ -34,7 +33,7 @@ EOF
 sudo docker build -t mikrotik-chr-6 .
 
 # Jalankan Container MikroTik CHR
-sudo docker run --name mikrotik-chr-6 --restart unless-stopped \
+sudo docker run --name mikrotik-chr-7 --restart unless-stopped \
     -p 7000:8291 \
     -p 7001:80 \
     -p 7002:443 \
