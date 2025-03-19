@@ -5,13 +5,13 @@ sudo apt update
 sudo apt install -y wget unzip qemu-utils qemu-user-static
 
 # Download MikroTik CHR Image
-wget https://download.mikrotik.com/routeros/6.49.17/chr-6.49.17.img.zip
+wget https://www.mikrotik-software.de/downloads/chr-6.49.img.zip
 
 # Ekstrak Image
-unzip chr-6.49.17.img.zip
+unzip chr-6.49.img.zip
 
 # Konversi Image ke Format QCOW2
-qemu-img convert -f raw -O qcow2 chr-6.49.17.img chr-6.49.17.qcow2
+qemu-img convert -f raw -O qcow2 chr-6.49.img chr-6.49.qcow2
 
 # Buat Dockerfile
 cat <<EOF > Dockerfile
@@ -21,7 +21,7 @@ FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y qemu-user-static qemu-system-x86
 
 # Copy the CHR image
-COPY chr-6.49.17.qcow2 /chr-6.49.17.qcow2
+COPY chr-6.49.qcow2 /chr-6.49.qcow2
 
 # Expose ports
 EXPOSE 8291 80 443 22 23 21 53/udp 53/tcp 123/udp 8728 8729 2210 179 8292 1194/udp 1194/tcp 1701/udp 1723 500/udp 4500/udp 50/tcp 51/tcp 1812/udp 1813/udp
