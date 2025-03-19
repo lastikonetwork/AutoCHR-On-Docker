@@ -11,6 +11,33 @@ bash <(wget -qO- https://raw.githubusercontent.com/lastikonetwork/AutoCHR-On-Doc
 bash <(wget -qO- https://raw.githubusercontent.com/lastikonetwork/AutoCHR-On-Docker/refs/heads/main/RoS7/v7.sh)
 ```
 
+- Full Example with Port Mapping
+```
+docker run --name ros6 --restart unless-stopped \
+    -p 7000:8291 \
+    -p 7001:8728 \
+    -p 7002:8729 \
+    -p 7003:22 \
+    -p 7004:80 \
+    -p 7005:443 \
+    -p 7006:21 \
+    -p 7007:23 \
+    -p 7008:53 \
+    -p 7009:2210 \
+    -p 7010:179 \
+    -p 7011:1194 \
+    -p 7012:1723 \
+    -p 7013:53/udp \
+    -p 7014:123/udp \
+    -p 7015:1194/udp \
+    -p 7016:1701/udp \
+    -p 7017:500/udp \
+    -p 7018:4500/udp \
+    -p 7019:1812/udp \
+    -p 7020:1813/udp \
+    ros6
+```
+
 # Expose Port
 | Service          | Protocol | Port |
 |------------------|----------|------|
