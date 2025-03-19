@@ -3,12 +3,12 @@
 # Build Local Image with Automated Script
 ### RouterOS 6
 ```
-bash <(wget -qO- https://raw.githubusercontent.com/safrinnetwork/Auto-Install-MikroTik-CHR-on-Docker/main/RoS6/v6.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/lastikonetwork/AutoCHR-On-Docker/refs/heads/main/RoS6/v6.sh)
 ```
 
 ### RouterOS 7
 ```
-bash <(wget -qO- https://raw.githubusercontent.com/safrinnetwork/Auto-Install-MikroTik-CHR-on-Docker/main/RoS7/v7.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/lastikonetwork/AutoCHR-On-Docker/refs/heads/main/RoS7/v7.sh)
 ```
 
 # Docker Hub Image
