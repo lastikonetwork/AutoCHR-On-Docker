@@ -79,7 +79,7 @@ sudo crontab -e
 ```
 - Add this command
 ```
-@reboot sudo docker start ros6
+@reboot sudo docker start mikrotik-chr-6
 ```
 ### RouterOS 7
 - Open crontab
@@ -88,5 +88,5 @@ sudo crontab -e
 ```
 - Add this command
 ```
-@reboot sudo docker start ros7
+@reboot sudo docker start mikrotik-chr-6
 ```
