@@ -88,5 +88,5 @@ sudo crontab -e
 ```
 - Add this command
 ```
-@reboot sudo docker start mikrotik-chr-6
+@reboot sudo docker start mikrotik-chr-7
 ```
