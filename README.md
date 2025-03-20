@@ -14,7 +14,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/lastikonetwork/AutoCHR-On-Doc
 - Full Example with Port Mapping
 
 ```
-sudo docker run --name mikrotik-chr-7 --restart unless-stopped -p 2222:22 -p 1194:1194 -p 8291:8291 -p 1701:1701 -p 5900:5900 -p 500:500 -p 3389:3389 -p 8728:8728 -p 8729:8729 -p 2222:22 -p 80:80 -p 443:443 -p 2121:21 mikrotik-chr-7
+sudo docker run --name mikrotik-chr-7 --restart unless-stopped -p 1194:1194 -p 8291:8291 -p 1701:1701 -p 5900:5900 -p 500:500 -p 3389:3389 -p 8728:8728 -p 8729:8729 -p 2222:22 -p 80:80 -p 443:443 -p 2121:21 mikrotik-chr-7
 ```
 
 ```
